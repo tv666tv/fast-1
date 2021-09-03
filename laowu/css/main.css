@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 * {
   padding: 0;
   margin: 0;
@@ -36,26 +43,62 @@ h6 {
   box-shadow: none;
   padding-top: 32px; */
   background-color: #ededed;
-	max-width: 800px;
-	margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 #page-content {
   background-color: #fff;
   word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
   hyphens: auto;
-  padding: 20px 16px 12px;
+  padding: 20px 12px 12px;
 }
 #page-content .title {
   font-size: 0.44rem;
   line-height: 1.4;
   margin-bottom: 0.28rem;
 }
-.pg{
-	width: 100%;
+.pg {
+  width: 100%;
 }
-.pg img{
-	width: 100%;
+.pg img {
+  width: 100%;
+  display: block;
+}
+img {
+  display: block;
+}
+.wx-box {
+  text-align: center;
+}
+.nav{
+  display: flex;
+  margin-bottom: 0.2rem;
+  
+}
+.nav a{
+  font-size: 0.26rem;
+}
+.wx {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.wake-qq {
+  text-align: center;
+}
+.wx img {
+  padding-top: 0.3rem;
+  width: 8rem;
+  width: 100%;
+}
+.qq-kf {
+  position: fixed;
+  right: 0;
+  top: 40px;
+  z-index: 999;
 }
 #meta_content {
   position: relative;
@@ -75,6 +118,7 @@ h6 {
   -webkit-border-radius: 2px;
   width: auto;
   overflow: hidden;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   white-space: nowrap;
   word-wrap: normal;
@@ -175,30 +219,49 @@ i {
   color: red !important;
 }
 .intro-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  padding-left: 0;
 }
 .intro-img img {
   display: block;
   width: 100%;
+  max-height: 15rem;
 }
 .fk .intro-img img {
   width: 48%;
 }
 .fk .intro-img video {
   width: 48%;
+  display: block;
+  max-height: 10rem;
 }
 .tj {
   width: 100%;
+  /* height: auto; */
+  /* max-height: 210px !important ; */
 }
-.gx{
-	max-height: 300px;
+.video-js {
+  height: auto;
 }
-.red.yf{
-	font-size: 0.3rem !important;
-	padding-bottom: 0.09rem;
-	display: block;
+.video1-dimensions {
+  height: auto;
+}
+.video-js .vjs-tech {
+  height: auto !important;
+  position: relative !important;
+}
+.gx {
+  max-height: 300px;
+}
+.red.yf {
+  font-size: 0.3rem !important;
+  padding-bottom: 0.09rem;
+  display: block;
 }
 #related_container {
   padding-left: 0.16rem;
@@ -222,7 +285,11 @@ i {
   margin-left: 0;
   padding-left: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 a {
@@ -240,6 +307,7 @@ a {
 .f_container .sub {
   width: auto;
   overflow: hidden;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   white-space: nowrap;
   word-wrap: normal;
@@ -253,4 +321,7 @@ a {
   height: 18px;
   position: relative;
   padding-right: 28px;
+}
+.kpzs{
+  text-decoration: underline;
 }
