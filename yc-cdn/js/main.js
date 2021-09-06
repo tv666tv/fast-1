@@ -12,9 +12,9 @@ let bannerSwiper = new Swiper(".banner-swiper-container", {
 
 let marqueeSwiper = new Swiper(".marquee-swiper-container", {
   loop: true, // 循环模式选项
-  slidesPerView: 4,
+  slidesPerView: 1,
   spaceBetween: 20,
-  speed: 1000,
+  speed: 6000,
   autoplay: {
     delay: 1,
     stopOnLastSlide: false,
@@ -79,12 +79,12 @@ const iosLinkList = data.filter((item) => item.key === "iosLink");
 const randomNo = Math.floor(Math.random() * qqList.length);
 currentQq = qqList[randomNo].value;
 
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
   const qqDom = document.querySelectorAll(".qq");
   qqDom.forEach((item) => {
     item.innerHTML = currentQq;
   });
-});
+// });
 
 if (cnzzList.length) {
   loadScript(cnzzList[0].value);
@@ -127,9 +127,9 @@ function wakeQQ() {
     doneText: "确定",
   }).then(() => {
     if(isAndroid){
-      location.href = androidLink || "https://download-jdb.oss-cn-qingdao.aliyuncs.com/%E9%BE%99%E5%AE%AB%E4%BC%9A%E6%89%80-v3.1.6-20210613.apk";
+      location.href = androidLink;
     }else{
-      location.href = iosLink || "https://bwlp666.com/w5Tk.app";
+      location.href = iosLink;
     }
   });
   copy();
