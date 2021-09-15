@@ -192,6 +192,7 @@ body {
 .banner .swiper-slide img {
   width: 7.02rem;
   height: 3.8rem;
+  border-radius: 0.12rem;
 }
 .tljr {
   width: 100%;
