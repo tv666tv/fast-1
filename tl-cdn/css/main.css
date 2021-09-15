@@ -34,7 +34,7 @@ body {
   padding-bottom: 0.2rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
+  width: 7.5rem;
 }
 .fixed-box {
   height: 6.66rem;
@@ -136,7 +136,7 @@ body {
   /* display: none; */
 }
 .contact .bz {
-  width: 100%;
+  width: 7.5rem;
   display: block;
   margin-top: 1rem;
 }
