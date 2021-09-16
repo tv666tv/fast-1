@@ -108,7 +108,7 @@ body {
   width: 1.5rem;
   z-index: 1111;
   right: 0.2rem;
-  top: 4.8rem;
+  top: 6.1rem;
   display: block;
 }
 
@@ -120,25 +120,19 @@ body {
 }
 
 .contact {
-  height: 2.88rem;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  background:#fff url("../imgs/ypapp-title.png.123");
   background-repeat: no-repeat;
-  background-size: 7.5rem 1.8rem;
-  /* margin-top: 6.66rem; */
-  margin-top: 5.63rem;
   z-index: 999;
-  border-radius: 12px;
   overflow: hidden;
-  /* display: none; */
+  padding-top: 0.10rem;
+  background-color: #000;
 }
 .contact .bz {
   width: 7.5rem;
   display: block;
-  margin-top: 1rem;
 }
 .contact_top{
   display: none;
@@ -148,20 +142,20 @@ body {
   height: 0.3rem;
   /* background-color: #a92db1; */
   font-size: 0.26rem;
-  color: #a92db1;
+  color: #fff;
   font-weight: bold;
   line-height: 0.3rem;
   border-radius: 0.04rem;
   padding: 0.02rem 0.04rem;
   position: absolute;
   left: 5.68rem;
-  top: 2.08rem;
+  top: 0.75rem;
   z-index: 300;
 }
 .contact .download {
   position: absolute;
   height: 100%;
-  width: 4rem;
+  width: 7.5rem;
   left: 0;
 }
 
@@ -169,9 +163,11 @@ body {
   width: 1.6rem;
   margin-top: 0.05rem;
 }
+
 .download-gif1{
   margin-top: 0.19rem;
 }
+
 .contact2 {
   font-size: 0.48rem;
   text-align: center;
@@ -191,7 +187,7 @@ body {
 }
 .banner .swiper-slide img {
   width: 7.02rem;
-  height: 3.8rem;
+  height: 3.5rem;
   border-radius: 0.12rem;
 }
 .tljr {
@@ -406,6 +402,7 @@ body {
   /* z-index: 9999; */
   background-color: #fff;
   z-index: 11;
+  margin-top: 6.63rem;
 }
 .app_fixed .fixed-box {
   background: none;
@@ -423,7 +420,7 @@ body {
 
 .app_fixed .contact_middle{
  position: fixed;
- top: 1.7rem;
+ /* top: 1.7rem; */
  z-index: 11;
  margin-top: 0;
 }
