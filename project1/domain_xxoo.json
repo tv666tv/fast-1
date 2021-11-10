@@ -1,0 +1,1 @@
+[{"baseURL":"https://api.58yue.me:8443","wsURL":"wss://wss.58yue.me:8443","staticType":1,"staticUrl":"https://file.58yue.me:8443"},{"baseURL":"http://192.168.1.187:9099","wsURL":"ws://192.168.1.187:45678","staticType":1,"staticUrl":"https://file.58yue.me:8443"}]
