@@ -1,0 +1,115 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+allow-lan: false
+mode: Rule
+log-level: info
+external-controller: '0.0.0.0:9090'
+secret: ''
+
+
+# 代理节点
+
+# Shadowsocks 支持的加密方式:
+#   aes-128-gcm aes-192-gcm aes-256-gcm
+#   aes-128-cfb aes-192-cfb aes-256-cfb
+#   aes-128-ctr aes-192-ctr aes-256-ctr
+#   rc4-md5 chacha20-ietf xchacha20
+#   chacha20-ietf-poly1305 xchacha20-ietf-poly1305
+
+# 配置范本
+# Shadowsocks 配置范本
+# 第一种配置
+#- name: "你的SS节点1"               # 软件显示的节点名字
+#  type: ss                                  # 代理类型
+#  server: 1.2.4.8                          # 服务器 IP
+#  port: 443                                 #  端口号
+#  cipher: chacha20-ietf-poly1305   # 加密方法
+#  password: "password"                # SS 密码
+#  # udp: true                                #默认不开启
+  
+#第二种配置
+# Shadowsocks + simple-obfs   配置范本
+#- name: "你的SS节点2"
+#  type: ss
+#  server: 1.2.4.8
+#  port: 443
+#  cipher: chacha20-ietf-poly1305
+#  password: "password"
+#  plugin: obfs
+#  plugin-opts:                 
+#    mode: tls # or http               #  大部分选择 HTTP
+#    # host: bing.com                  #  伪装
+
+# 第三种配置 ssr
+#- name: "你的SS节点1"               # 软件显示的节点名字
+#  type: ssr                                  # 代理类型
+#  server: 1.2.4.8                          # 服务器IP
+#  port: 443                                 #  端口号
+#  cipher: chacha20-ietf-poly1305   # 加密方法
+#  password: "password"                # SS密码
+#  #udp: true
+#  protocol: auth_sha1_v4
+#  obfs: http_simple
+ 
+# VMess 的配置
+#- name: "你的V2RAY节点1" # 软件显示的节点名字
+#  type: vmess # 代理类型
+#  server: v2rayssr.com # 服务器 IP
+#  port: 443 #  端口号
+#  uuid: a3482e88-686a-4a58-8126-99c9df64b7bf
+#  alterId: 64  #额外的 ID
+#  cipher: auto
+#  #上面几行为必选参数
+#  #下面几行为可选参数  根据你的配置情况来
+#  # udp: true    #默认不开启
+#  # tls: true      #TLS 开启
+#  # skip-cert-verify: true     #默认不开启
+#  # network: ws    # 网路类型 WS HTTP 等
+#  # ws-path: /path  # 路径
+#  # ws-headers:     #默认不开启
+#  #  Host: v2ray.com    # HOST
+
+# Trojan 的配置
+#- name: "trojan"
+#  type: trojan
+#  server: server
+#  port: 443
+#  password: yourpsk
+#  # udp: true
+#  # sni: example.com # aka server name
+#  # alpn:
+#  #   - h2
+#  #   - http/1.1
+#  # skip-cert-verify: true
+
+
+# 配置开始
+proxies:
+  - name: Japan-日本
+    type: ssr
+    server: 54.199.98.203
+    port: 9380
+    cipher: aes-256-cfb
+    password: H5rbrYwJQ1CDnJdF
+    protocol: auth_sha1_v4
+    obfs: http_simple
+  - name: India-印度
+    type: ssr
+    server: 147.139.5.55
+    port: 8888
+    cipher: aes-256-cfb
+    password: GFHhujkjkY
+    protocol: auth_sha1_v4
+    obfs: http_simple		
+# 代理组策略		
+proxy-groups:
+  - name: Work
+    type: select
+    proxies:
+      - Japan-日本
+rules:
+#  - DOMAIN-SUFFIX,v255mg.com,Work
+#  - DOMAIN-SUFFIX,wbt1.cc,Work
+#  - IP-CIDR,45.61.236.74/22,Work
+# - 'MATCH,DIRECT'
