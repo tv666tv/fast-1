@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="referrer" content="strict-origin-when-cross-origin">
+		<title>东方-你想要的，这里都有</title>
+		<script src="./static/js/flexible.js"></script>
+		<link rel="stylesheet" href="./static/css/dplayer.min.css">
+		<link rel="stylesheet" href="./static/css/index.css">
+		
+ 
+		<style>
+			body>span{
+				position: fixed;
+				bottom: 0;
+			}
+			body,
+			html {
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				padding: 0;
+			}
+			.page {
+				width: 100%;
+				height: 100%;
+				max-width: 750px;
+				margin: 0 auto;
+			}
+			* {
+				padding: 0;
+				margin: 0;
+				text-decoration: none;
+				box-sizing: border-box;
+				-webkit-tap-highlight-color: transparent;
+			}
+			.page img{
+				width: 100%;
+				vertical-align: bottom;
+				object-fit: cover;
+			}
+			.gif{
+				position: relative;
+				padding: 0 0.3rem;
+			}
+			.gifcode {
+				position: absolute;
+				z-index: 22;
+				left: 4.3rem;
+				font-size: 28px;
+				top: 1.45rem;
+				color: #fff;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div class="page" onclick="downloadApp()">
+			<div class="hader">
+				<img src="./static/image/header.png">
+			</div>
+			<div class="gif">
+				<img src="./static/image/gif.gif" alt="" srcset="">
+				<div class="livechat gifcode"><em></em></div>
+			</div>
+			<div class="container" style="padding-top: 15px;">
+				<div class="photos">
+					<div><img src="./static/image/p1.jpg"></div>
+					<div><img src="./static/image/p2.jpg"></div>
+					<div><img src="./static/image/p3.jpg"></div>
+					<div><img src="./static/image/p4.jpg"></div>
+					<div><img src="./static/image/p5.jpg"></div>
+					<div><img src="./static/image/p6.jpg"></div>
+				</div>
+				<div class="viode_box">
+					<div id="dplayer"></div>
+				</div>
+				<ul class="list">
+					<li class="item">
+						<div class="ava">
+							<img src="./static/image/a1.jpg">
+						</div>
+						<div class="content">
+							<div class="name">
+								<span class="v">东方认证</span>
+								<b>东方优质用户</b>
+							</div>
+							<div class="taga">
+								<span>在校学生</span>
+								<span>寻求刺激</span>
+								<span>潮吹喷水</span>
+							</div>
+							<div class="info">
+								<span>19岁</span>
+								<span>163cm</span>
+								<span>B罩杯</span>
+								<span class="area"><em></em> 全区</span>
+							</div>
+							<div class="call">我要约她</div>
+						</div>
+					</li>
+					<li class="item">
+						<div class="ava">
+							<img src="./static/image/a2.jpg">
+						</div>
+						<div class="content">
+							<div class="name">
+								<span class="v">东方认证</span>
+								<b>东方优质用户</b>
+							</div>
+							<div class="taga">
+								<span>清纯妹妹</span>
+								<span>可盐可甜</span>
+								<span>乖巧可爱</span>
+							</div>
+							<div class="info">
+								<span>24岁</span>
+								<span>168cm</span>
+								<span>C罩杯</span>
+								<span class="area"><em></em> 全区</span>
+							</div>
+							<div class="call">我要约她</div>
+						</div>
+					</li>
+					<li class="item">
+						<div class="ava">
+							<img src="./static/image/a3.jpg">
+						</div>
+						<div class="content">
+							<div class="name">
+								<span class="v">东方认证</span>
+								<b>东方优质用户</b>
+							</div>
+							<div class="taga">
+								<span>公司秘书</span>
+								<span>野性放荡</span>
+								<span>反差美女</span>
+							</div>
+							<div class="info">
+								<span>24岁</span>
+								<span>172cm</span>
+								<span>D罩杯</span>
+								<span class="area"><em></em> 全区</span>
+							</div>
+							<div class="call">我要约她</div>
+						</div>
+					</li>
+					<li class="item">
+						<div class="ava">
+							<img src="./static/image/a4.jpg">
+						</div>
+						<div class="content">
+							<div class="name">
+								<span class="v">东方认证</span>
+								<b>东方优质用户</b>
+							</div>
+							<div class="taga">
+								<span>超级辣妈</span>
+								<span>老公不在</span>
+								<span>家里可约</span>
+							</div>
+							<div class="info">
+								<span>26岁</span>
+								<span>167cm</span>
+								<span>C罩杯</span>
+								<span class="area"><em></em> 全区</span>
+							</div>
+							<div class="call">我要约她</div>
+						</div>
+					</li>
+					<li class="item">
+						<div class="ava">
+							<img src="./static/image/a5.jpg">
+						</div>
+						<div class="content">
+							<div class="name">
+								<span class="v">东方认证</span>
+								<b>东方优质用户</b>
+							</div>
+							<div class="taga">
+								<span>极品萝莉</span>
+								<span>粉嫩无毛</span>
+								<span>酒店可约</span>
+							</div>
+							<div class="info">
+								<span>17岁</span>
+								<span>163cm</span>
+								<span>A罩杯</span>
+								<span class="area"><em></em> 全区</span>
+							</div>
+							<div class="call">我要约她</div>
+						</div>
+					</li>
+					<li class="item">
+						<div class="ava">
+							<img src="./static/image/a6.jpg">
+						</div>
+						<div class="content">
+							<div class="name">
+								<span class="v">东方认证</span>
+								<b>东方优质用户</b>
+							</div>
+							<div class="taga">
+								<span>兼职约啪</span>
+								<span>在校学生</span>
+								<span>交友线下</span>
+							</div>
+							<div class="info">
+								<span>19岁</span>
+								<span>174cm</span>
+								<span>B罩杯</span>
+								<span class="area"><em></em> 全区</span>
+							</div>
+							<div class="call">我要约她</div>
+						</div>
+					</li>
+					<li class="item">
+						<div class="ava">
+							<img src="./static/image/a7.jpg">
+						</div>
+						<div class="content">
+							<div class="name">
+								<span class="v">东方认证</span>
+								<b>东方优质用户</b>
+							</div>
+							<div class="taga">
+								<span>姐妹花❀</span>
+								<span>性感双飞</span>
+								<span>随时可约</span>
+							</div>
+							<div class="info">
+								<span>21岁 21岁</span>
+								<span>169cm 170cm</span>
+								<span>A罩杯 B罩杯</span>
+								<span class="area"><em></em> 全区</span>
+							</div>
+							<div class="call">我要约她</div>
+						</div>
+					</li>
+				</ul>
+				<div class="more">点击查看更多</div>
+			</div>
+			<div class="footer">
+				<div class="logo"><img src="./static/image/logo.png"></div>
+				<div class="tips_text">
+					<div><b>东方高端约炮平台</b><span></span></div>
+					<span class="livechat">下载app 注册邀请码 <em></em> ，开始约啪~</span>
+				</div>
+				<input type="text" id="copy" readonly="">
+				<div class="download">立即下载</div>
+			</div>
+			<div class="layer_mask" v-if="showLayer">
+				<div class="layer_content">
+					<div class="title">温馨提示</div>
+					<div>
+						<div class="text video_text livechat">邀请码复制成功！<br>下载并安装东方app，注册邀请码填写"<em></em>"自动添加小妹为好友，<b>观看更多精彩视频~</b></div>
+						<div class="text copy_text livechat">邀请码复制成功！<br>下载并安装东方app，注册邀请码填写"<em></em>"自动添加小妹为好友，<b>开始约啪~</b></div>
+					</div>
+					<div class="close_layer">点击下载并注册【专属约啪app】</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="static/js/config.js"></script>
+		<script src="./static/js/dplayer.min.js"></script>
+		<script src="./static/js/jquery-3.4.1.min.js"></script>
+ 
+	</body>
+</html>
